@@ -1,6 +1,23 @@
 @import './fonts.scss';
 @import './variables.scss';
+@import './normalize.scss';
 
 :root{
     font-size: 28px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{    
+    height: 100vh;
+    width: 100vw;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
