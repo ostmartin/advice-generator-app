@@ -7,7 +7,7 @@ const setContent = (process, Component, data) => {
         case 'waiting':
             return <Skeleton/>;
         case 'loading':
-            return <Spinner/>;
+            return <Spinner color="hsl(150, 100%, 66%)" />;
         case 'success':
             return <Component data={data}/>;
         case 'error':

@@ -14,10 +14,20 @@
 html{    
     height: 100vh;
     width: 100vw;
+    font-family: 'Manrope', sans-serif;
 }
 
 body{
     height: 100%;
     width: 100%;
     position: relative;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+    background-color: $dark-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,6 +1,6 @@
 const Error = () => {
     return (
-        <div>
+        <div className='advice'>
             Something went wrong... Try again later
         </div>
     )
