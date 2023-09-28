@@ -10,7 +10,6 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -48,10 +47,6 @@ Users should be able to:
 - Create React App
 - Advice Slip JSON API
 - Mobile-first workflow
-
-### What I learned
-
-I practiced creating custom fields using the useField hook and Formik. Used SCSS for styling, also used mixin. Tried ViteJS
 
 ### Useful resources
 
