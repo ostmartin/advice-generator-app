@@ -10,9 +10,8 @@ import dividerMobile from '../../images/pattern-divider-mobile.svg'
 
 const App = () => {
   const [advice, setAdvice] = useState(null);
-  const [windowWidth, setWindowWidth] = useState(0);
   const {process, clearError, setProcess, getAdvice} = useAdviceSlip();
-
+  console.log('render')
   const updateAdvice = () => {
     clearError();
 
@@ -20,20 +19,6 @@ const App = () => {
       .then(res => setAdvice(prev => res))
       .then(() => setProcess('success'));
   }
-
-  const handleResize = () => {
-    console.log('listener')
-    setWindowWidth(window.innerWidth);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-    // eslint-disable-next-line
-  }, []);
 
   useEffect(() => {
     updateAdvice();
@@ -43,10 +28,13 @@ const App = () => {
   return (
     <>
       {setContent(process, ContentView, advice)}
-      {windowWidth >= 376 ? 
-        (<img src={dividerDesktop} alt="divider" />) :
-        (<img src={dividerMobile} alt="divider" />)
-      }
+      <picture>
+        <source
+            media='(max-width: 375px)'
+            srcSet={dividerMobile}
+        />
+        <img src={dividerDesktop} alt="divider" />
+      </picture>
     </>
   );
 }
